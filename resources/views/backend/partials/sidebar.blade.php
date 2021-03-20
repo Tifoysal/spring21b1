@@ -21,9 +21,9 @@
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="{{route('category.list')}}">
                     <span data-feather="shopping-cart"></span>
-                    KODEEO
+                    Category
                 </a>
             </li>
             <li class="nav-item">

@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\Backend\CategoryController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,7 +17,4 @@ Route::get('/', function () {
     return view('backend.master');
 });
 
-
-Route::get('/order', function () {
-    return view('backend.layouts.order');
-});
+Route::get('/category/list',[CategoryController::class,'list'])->name('category.list');
