@@ -6,6 +6,7 @@
        Create Category
     </button>
 
+
     <table class="table">
         <thead>
         <tr>
@@ -16,24 +17,19 @@
         </tr>
         </thead>
         <tbody>
+
+        @foreach($categories as $data)
         <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
+            <th scope="row">{{$data->id}}</th>
+            <td>{{$data->name}}</td>
+            <td>{{$data->description}}</td>
+            <td>
+                <a class="btn btn-success" href="">View</a>
+                <a class="btn btn-danger" href="">Delete</a>
+            </td>
         </tr>
-        <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-        </tr>
-        <tr>
-            <th scope="row">3</th>
-            <td>Larry</td>
-            <td>the Bird</td>
-            <td>@twitter</td>
-        </tr>
+        @endforeach
+
         </tbody>
     </table>
 
@@ -50,20 +46,20 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <form>
+                <form action="{{route('category.create')}}" method="post">
+                    @csrf
                 <div class="modal-body">
 
                         <div class="form-group">
                             <label for="exampleInputEmail1">Category Name</label>
-                            <input required type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Category name">
+                            <input name="category_name" required type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Category name">
 
                         </div>
 
                         <div class="form-group">
                             <label for="exampleInputEmail1">Category Description</label>
-                            <textarea class="form-control" name="" id="" placeholder="Enter Description..."  ></textarea>
+                            <textarea class="form-control" name="description" id="" placeholder="Enter Description..."  ></textarea>
                         </div>
-
 
 
                 </div>

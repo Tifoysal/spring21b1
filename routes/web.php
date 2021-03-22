@@ -18,3 +18,4 @@ Route::get('/', function () {
 });
 
 Route::get('/category/list',[CategoryController::class,'list'])->name('category.list');
+Route::post('/category/create',[CategoryController::class,'create'])->name('category.create');
