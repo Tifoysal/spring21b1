@@ -12,8 +12,9 @@ class CategoryController extends Controller
     {
         //select * from categories;
         $categories=Category::all();
+        $title='Category List';
 //        dd($categories);
-        return view('backend.layouts.category.list',compact('categories'));
+        return view('backend.layouts.category.list',compact('categories','title'));
     }
 
     public function create(Request $request)
