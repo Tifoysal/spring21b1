@@ -4,10 +4,19 @@
 
     <a class="btn btn-info" href="{{route('product.create.form')}}">Create Product</a>
 
+
+    @if(session()->has('success'))
+        <div class="alert alert-success">
+            {{ session()->get('success') }}
+        </div>
+    @endif
+
+
     <table class="table">
         <thead>
         <tr>
             <th scope="col">#</th>
+            <th scope="col">Image</th>
             <th scope="col">Name</th>
             <th scope="col">Price</th>
             <th scope="col">QTY</th>
@@ -20,16 +29,21 @@
         @foreach($product as $key=>$data)
         <tr>
             <th scope="row">{{$key+1}}</th>
-            <td>{{$data->name}}</td>
+            <td>
+                <img style="width: 100px;" src="{{url('/images/products/'.$data->image)}}" alt="">
+            </td>
             <td>{{$data->price}}</td>
             <td>{{$data->quantity}}</td>
-            <td>{{$data->category_id}}</td>
+            <td>{{$data->productCategory->name}}</td>
             <td>
                 <a class="btn btn-success" href="">View</a>
             </td>
         </tr>
+
         @endforeach
 
         </tbody>
+
     </table>
+    {{$product->links()}}
 @endsection

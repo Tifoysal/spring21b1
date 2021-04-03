@@ -3,7 +3,7 @@
 @section('page')
 
 
-    <form action="{{route('product.create')}}" method="post">
+    <form action="{{route('product.create')}}" method="post" enctype="multipart/form-data">
         @csrf
         <div class="row">
             <div class="col-md-6">
@@ -31,6 +31,12 @@
                     </select>
                 </div>
 
+                <div class="form-group">
+                    <label for="">Upload Image</label>
+                    <input name="product_image" type="file" class="form-control">
+                </div>
+
+                <br>
                 <button type="submit" class="btn btn-success">Submit</button>
 
 
