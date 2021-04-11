@@ -28,15 +28,16 @@
 
         @foreach($product as $key=>$data)
         <tr>
-            <th scope="row">{{$key+1}}</th>
+            <th scope="row">{{$data->id}}</th>
             <td>
                 <img style="width: 100px;" src="{{url('/images/products/'.$data->image)}}" alt="">
             </td>
+            <td>{{$data->name}}</td>
             <td>{{$data->price}}</td>
             <td>{{$data->quantity}}</td>
             <td>{{$data->productCategory->name}}</td>
             <td>
-                <a class="btn btn-success" href="">View</a>
+                <a class="btn btn-danger" href="{{route('product.delete',$data->id)}}">Delete</a>
             </td>
         </tr>
 

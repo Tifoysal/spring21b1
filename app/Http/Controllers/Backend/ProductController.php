@@ -11,8 +11,14 @@ class ProductController extends Controller
 {
     public function list()
     {
+
+        //collection- all(), get(), paginate(10)
+        //object - first(), find()
+        // $singleProduct=Product::where('category_id',1)->where('status','active')->get();
+
+
         $title='Product List';
-        $product=Product::with('productCategory')->paginate(10);
+        $product=Product::with('productCategory')->paginate(5);
         return view('backend.layouts.product.list',compact('title','product'));
     }
 
@@ -51,5 +57,19 @@ class ProductController extends Controller
         ]);
 
         return redirect()->route('product.list')->with('success','Product Created Successfully.');
+    }
+
+    public function deleteProduct($id)
+    {
+//        first get the product
+        $product=Product::find($id);
+        //then delete it
+        $product->delete();
+
+//        Product::where('id',$id)->delete();
+        return redirect()->back()->with('success','Product Deleted Successfully.');
+
+
+
     }
 }
