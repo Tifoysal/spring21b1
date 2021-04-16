@@ -6,8 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="2837deff-9550-4880-ab08-96adbdd70583" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/frontend/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/master.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/frontend/partials/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/partials/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/Authenticate.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/Authenticate.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/backend/partials/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/partials/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/backend/partials/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/partials/sidebar.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -175,7 +179,8 @@
       <workItem from="1616828612037" duration="4663000" />
       <workItem from="1617431156324" duration="4936000" />
       <workItem from="1618121326801" duration="3796000" />
-      <workItem from="1618218281542" duration="4622000" />
+      <workItem from="1618218281542" duration="5277000" />
+      <workItem from="1618594929649" duration="4313000" />
     </task>
     <servers />
   </component>

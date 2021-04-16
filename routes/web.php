@@ -6,6 +6,7 @@ use App\Http\Controllers\Frontend\HomeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Backend\CategoryController;
 use App\Http\Controllers\Frontend\UserController;
+use App\Http\Controllers\Backend\UserController as BackendUserController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -29,7 +30,15 @@ Route::get('/logout',[UserController::class,'logout'])->name('logout');
 
 //admin panel routes
 Route::group(['prefix'=>'admin'],function (){
+
+    //admin login route
+    Route::get('login',[BackendUserController::class,'loginForm'])->name('admin.login');
+    Route::post('do-login',[BackendUserController::class,'doLogin'])->name('admin.dologin');
+
+Route::group(['middleware'=>'admin-auth'],function (){
     Route::get('/',[DashboardController::class,'home'])->name('home');
+    Route::get('logout',[BackendUserController::class,'logout'])->name('admin.logout');
+
 
 //category
     Route::get('/category/list',[CategoryController::class,'list'])->name('category.list');
@@ -40,5 +49,7 @@ Route::group(['prefix'=>'admin'],function (){
     Route::get('/product/create/form',[ProductController::class,'createForm'])->name('product.create.form');
     Route::post('/product/create',[ProductController::class,'create'])->name('product.create');
     Route::get('/product/delete/{id}',[ProductController::class,'deleteProduct'])->name('product.delete');
+
+});
 
 });
