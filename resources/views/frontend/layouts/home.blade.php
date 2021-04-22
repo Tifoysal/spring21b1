@@ -1,8 +1,9 @@
 @extends('frontend.master')
 
 @section('content')
-
-
+    <style>
+        /*css*/
+    </style>
     <section class="py-5 text-center container">
         <div class="row py-lg-5">
             <div class="col-lg-6 col-md-8 mx-auto">
@@ -30,8 +31,8 @@
                             <p class="card-text">{{$data->name}}</p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="btn-group">
-                                    <button type="button" class="btn btn-sm btn-primary">Add to cart</button>
-                                    <button type="button" class="btn btn-sm btn-warning">Buy Now</button>
+                                    <button onclick="cart()" type="button" class="btn btn-sm btn-primary">Add to cart</button>
+                                    <a href="{{route('product.show',$data->id)}}" class="btn btn-sm btn-warning">View</a>
                                 </div>
                                 <small class="text-muted">{{$data->price}} BDT</small>
                             </div>
@@ -45,4 +46,11 @@
         </div>
     </div>
 
+
+    <script type="text/javascript">
+        // js
+        function cart(){
+            alert("Are you sure?");
+        }
+    </script>
 @endsection

@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Backend\DashboardController;
 use App\Http\Controllers\Backend\ProductController;
+use App\Http\Controllers\Frontend\ProductController as FrontendProduct;
 use App\Http\Controllers\Frontend\HomeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Backend\CategoryController;
@@ -25,7 +26,9 @@ Route::post('/registration',[UserController::class,'registration'])->name('regis
 Route::post('/login',[UserController::class,'login'])->name('login');
 Route::get('/logout',[UserController::class,'logout'])->name('logout');
 
-
+//single product view
+Route::get('/show/product/{product_id}',[FrontendProduct::class,'showProduct'])->name('product.show');
+Route::get('/products/under/category/{category_id}',[FrontendProduct::class,'productsUnderCategory'])->name('products.under.category');
 
 
 //admin panel routes
