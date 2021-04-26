@@ -11,9 +11,9 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="{{route('show.booking')}}">
                         <span data-feather="file"></span>
-                        Orders
+                        Booking
                     </a>
                 </li>
                 <li class="nav-item">

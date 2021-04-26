@@ -31,8 +31,10 @@
                             <p class="card-text">{{$data->name}}</p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="btn-group">
-                                    <button onclick="cart()" type="button" class="btn btn-sm btn-primary">Add to cart</button>
-                                    <a href="{{route('product.show',$data->id)}}" class="btn btn-sm btn-warning">View</a>
+{{--                                    <button onclick="cart()" type="button" class="btn btn-sm btn-primary">Add to cart</button>--}}
+{{--                                    <a href="{{route('product.show',$data->id)}}" class="btn btn-sm btn-warning">View</a>--}}
+
+                                    <a href="{{route('show.car',$data->id)}}" class="btn btn-sm btn-warning">Book Now</a>
                                 </div>
                                 <small class="text-muted">{{$data->price}} BDT</small>
                             </div>

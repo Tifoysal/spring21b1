@@ -37,6 +37,7 @@
             <td>{{$data->quantity}}</td>
             <td>{{$data->productCategory->name}}</td>
             <td>
+                <a class="btn btn-success" href="{{route('product.edit',$data->id)}}">Edit</a>
                 <a class="btn btn-danger" href="{{route('product.delete',$data->id)}}">Delete</a>
             </td>
         </tr>
