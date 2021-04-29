@@ -3,9 +3,11 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
+use App\Mail\BookingNotification;
 use App\Models\Booking;
 use App\Models\Product;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class BookingController extends Controller
 {
@@ -36,7 +38,7 @@ class BookingController extends Controller
 
         if ($checkBook->count() == 0) {
             //if available then create booking/reservation
-            Booking::create([
+            $booking=Booking::create([
                 'car_id' => $request->car_id,
                 'user_id' => auth()->user()->id,
                 'booking_from' => $request->from_date,
@@ -45,6 +47,10 @@ class BookingController extends Controller
                 'rate' => $car->price,
                 'total' => $car->price * $daysCalculate,
             ]);
+
+            //send email to user
+            Mail::to(auth()->user()->email)->send(new BookingNotification($booking));
+
             return redirect()->back()->with('message', 'Booking created Successfully');
         } else {
             return redirect()->back()->with('message', 'Already booked.');
