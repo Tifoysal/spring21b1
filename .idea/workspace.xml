@@ -5,10 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2837deff-9550-4880-ab08-96adbdd70583" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/spring21b1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/spring21b1.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Backend/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Backend/ProductController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Frontend/BookingController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Frontend/BookingController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/layouts/product/list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/layouts/product/list.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/frontend/layouts/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/layouts/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/frontend/partials/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/partials/header.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -131,6 +134,7 @@
       <path value="$PROJECT_DIR$/vendor/dragonmantank/cron-expression" />
       <path value="$PROJECT_DIR$/vendor/tijsverkoyen/css-to-inline-styles" />
       <path value="$PROJECT_DIR$/vendor/nunomaduro/collision" />
+      <path value="$PROJECT_DIR$/vendor/bumbummen99/shoppingcart" />
     </include_path>
   </component>
   <component name="ProjectId" id="1phLH2gWnKLmoovoIoQn1KB2F5D" />
@@ -192,7 +196,10 @@
       <workItem from="1619246581095" duration="5545000" />
       <workItem from="1619458590005" duration="2947000" />
       <workItem from="1619605288394" duration="3539000" />
-      <workItem from="1619676507772" duration="5952000" />
+      <workItem from="1619676507772" duration="6436000" />
+      <workItem from="1619760685308" duration="18000" />
+      <workItem from="1619778758661" duration="2831000" />
+      <workItem from="1619782613010" duration="569000" />
     </task>
     <servers />
   </component>

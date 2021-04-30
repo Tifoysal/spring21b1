@@ -17,6 +17,12 @@
         </div>
     </section>
 
+    @if(session()->has('success'))
+        <div class="alert alert-success">
+            {{ session()->get('success') }}
+        </div>
+    @endif
+
     <div class="album py-5 bg-light">
         <div class="container">
 
@@ -34,7 +40,7 @@
 {{--                                    <button onclick="cart()" type="button" class="btn btn-sm btn-primary">Add to cart</button>--}}
 {{--                                    <a href="{{route('product.show',$data->id)}}" class="btn btn-sm btn-warning">View</a>--}}
 
-                                    <a href="{{route('show.car',$data->id)}}" class="btn btn-sm btn-warning">Book Now</a>
+                                    <a href="{{route('cart.add',$data->id)}}" class="btn btn-sm btn-warning">Add to Cart</a>
                                 </div>
                                 <small class="text-muted">{{$data->price}} BDT</small>
                             </div>

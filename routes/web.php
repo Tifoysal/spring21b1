@@ -6,6 +6,7 @@ use App\Http\Controllers\Frontend\BookingController;
 use App\Http\Controllers\Backend\BookingController as BackendBooking;
 use App\Http\Controllers\Frontend\ProductController as FrontendProduct;
 use App\Http\Controllers\Frontend\HomeController;
+use App\Http\Controllers\Frontend\OrderController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Backend\CategoryController;
 use App\Http\Controllers\Frontend\UserController;
@@ -37,6 +38,10 @@ Route::get('/products/under/category/{category_id}',[FrontendProduct::class,'pro
 Route::get('/show/car/{id}',[BookingController::class,'showCar'])->name('show.car');
 Route::post('/booking',[BookingController::class,'booking'])->name('car.booking');
 
+
+//cart route
+Route::get('/add-to-cart/{id}',[OrderController::class,'addToCart'])->name('cart.add');
+Route::get('/view-cart',[OrderController::class,'viewCart'])->name('cart.view');
 
 
 

@@ -24,6 +24,8 @@
                 </div>
             </div>
 
+            <a href="{{route('cart.view')}}"><span class="badge badge-success">Cart({{count(Cart::content())}})</span></a>
+
             @auth()
                 <span style="color:white;">{{auth()->user()->name}}</span> <a href="{{route('logout')}}"> Logout</a>
             @else
