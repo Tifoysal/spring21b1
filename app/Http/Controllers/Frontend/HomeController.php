@@ -7,12 +7,26 @@ use App\Models\Category;
 use App\Models\Product;
 use Illuminate\Http\Request;
 
+
 class HomeController extends Controller
 {
-    public function home()
+    protected $data=[];
+    public function home($product_id)
     {
-        $products=Product::all();
+        $products=Product::where('product_id',$product_id)->first();
+        $getData=$this->recursive($products->product_id);
+        return $getData;
+    }
 
-        return view('frontend.layouts.home',compact('products'));
+    public function recursive($productId)
+    {
+        $morebuy=Product::where('product_id',$productId)->first();
+            if($morebuy)
+            {
+                $this->data[$morebuy->id]['product_id']=$morebuy->product_id;
+                $this->data[$morebuy->id]['morebuy_product_id']=$morebuy->morebuy_product_id;
+                $this->recursive($morebuy->morebuy_product_id);
+            }
+        return $this->data;
     }
 }

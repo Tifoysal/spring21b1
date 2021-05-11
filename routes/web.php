@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Backend\DashboardController;
 use App\Http\Controllers\Backend\ProductController;
+use App\Http\Controllers\Backend\ReportController;
 use App\Http\Controllers\Frontend\BookingController;
 use App\Http\Controllers\Backend\BookingController as BackendBooking;
 use App\Http\Controllers\Frontend\ProductController as FrontendProduct;
@@ -74,6 +75,9 @@ Route::group(['middleware'=>'admin-auth'],function (){
 
     //booking
     Route::get('/show/booking',[BackendBooking::class,'showBooking'])->name('show.booking');
+
+    //report routes
+    Route::get('/report',[ReportController::class,'bookingReport'])->name('booking.report');
 });
 
 });

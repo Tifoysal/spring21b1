@@ -37,6 +37,12 @@
                         Customers
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{route('booking.report')}}">
+                        <span data-feather="users"></span>
+                        Report
+                    </a>
+                </li>
 
             @endif
 
