@@ -52,7 +52,7 @@
 
     </div>
     <div class="col-md-6" style="padding:50px; ">
-        <h1>Login here</h1>
+        <h1>Reset Your Password</h1>
         @if(session()->has('success'))
             <div class="alert alert-success">
                 {{ session()->get('success') }}
@@ -64,21 +64,19 @@
             @endforeach
         @endif
 
-        <form action="{{route('admin.dologin')}}" method="post">
+        <form action="{{route('password.reset.post')}}" method="post">
             @csrf
             <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">Email address</label>
-                <input required name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-            </div>
-            <div class="mb-3">
-                <label for="exampleInputPassword1" class="form-label">Password</label>
-                <input required name="password" type="password" class="form-control" id="exampleInputPassword1">
+                <label for="exampleInputEmail1" class="form-label">Enter New Password</label>
+                <input required name="password" type="password" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
             </div>
 
-            <p>
-                <a href="{{route('forget-password')}}">Forget Password?</a>
-            </p>
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Enter Password Again</label>
+                <input required name="password_confirmation" type="password" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <input type="hidden" value="{{$token}}" name="token">
+            <input type="hidden" value="{{$email}}" name="email">
 
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
@@ -88,13 +86,13 @@
     </div>
 </div>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" ></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" ></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" ></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" ></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" ></script>
 
-    <script src="https://getbootstrap.com/docs/5.0/dist/js/bootstrap.bundle.min.js" ></script>
+<script src="https://getbootstrap.com/docs/5.0/dist/js/bootstrap.bundle.min.js" ></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js"></script><script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" ></script>
-    <script src="https://getbootstrap.com/docs/5.0/examples/dashboard/dashboard.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js"></script><script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" ></script>
+<script src="https://getbootstrap.com/docs/5.0/examples/dashboard/dashboard.js"></script>
 </body>
 </html>

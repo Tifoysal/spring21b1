@@ -54,6 +54,12 @@ Route::group(['prefix'=>'admin'],function (){
     Route::get('login',[BackendUserController::class,'loginForm'])->name('admin.login');
     Route::post('do-login',[BackendUserController::class,'doLogin'])->name('admin.dologin');
 
+    //forget password links here
+    Route::get('/forget-password',[BackendUserController::class,'forgetPassword'])->name('forget-password');
+    Route::post('/forget-password-link',[BackendUserController::class,'forgetPasswordLink'])->name('forget-password.link');
+    Route::get('/forget-password-link-click/{token}/{email}',[BackendUserController::class,'passwordReset'])->name('password.reset');
+    Route::post('/reset-password',[BackendUserController::class,'resetPassword'])->name('password.reset.post');
+
 Route::group(['middleware'=>'admin-auth'],function (){
     Route::get('/',[DashboardController::class,'home'])->name('home');
     Route::get('logout',[BackendUserController::class,'logout'])->name('admin.logout');

@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2837deff-9550-4880-ab08-96adbdd70583" name="Default Changelist" comment="" />
+    <list default="true" id="2837deff-9550-4880-ab08-96adbdd70583" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Backend/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Backend/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Controller.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/backend/layouts/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/layouts/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -138,12 +145,13 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/backend/layouts/product" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/backend/layouts" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/views/backend/layouts" />
       <recent name="$PROJECT_DIR$/resources/views/backend/layouts/product" />
       <recent name="$PROJECT_DIR$/resources/views/frontend/layouts" />
     </key>
@@ -196,6 +204,8 @@
       <workItem from="1619939605956" duration="2012000" />
       <workItem from="1620666046848" duration="3927000" />
       <workItem from="1620758022622" duration="256000" />
+      <workItem from="1622354644799" duration="3797000" />
+      <workItem from="1622565518843" duration="3020000" />
     </task>
     <servers />
   </component>
